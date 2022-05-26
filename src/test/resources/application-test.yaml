@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: @project.artifactId@
+test:
+  value: test
