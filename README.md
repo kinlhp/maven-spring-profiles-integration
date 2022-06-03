@@ -23,13 +23,15 @@ Can be easily test with the
 > ***NOTE:*** If you want to build with the regular `mvn` command, you will need
 [Maven 3.5.0 or above](https://maven.apache.org/docs/history.html).
 
-> ***NOTE:*** You may need to increase the amount of memory available to Maven
-> by setting a `MAVEN_OPTS` environment variable with the value `-Xmx512m`.
-> Remember to set the corresponding property in your _IDE_ as well if you are
-> building and running tests there (e.g. in _Eclipse_ go to
-> _Preferences→Java→Installed JREs_ and edit the _JRE_ definition so that all
-> processes are launched with those arguments). This property is automatically
-> set if you use the maven wrapper.
+> ***NOTE:*** In cases where a default property is overridden by a property of
+> the same name in a specific profile, the declaration order of [Maven profiles
+> must follow the same declaration order as for Spring profiles](
+> https://maven.apache.org/guides/introduction/introduction-to-profiles.html#profile-order
+> ). To see which profile will activate in a certain build, use the
+> [maven-help-plugin](https://maven.apache.org/plugins/maven-help-plugin):
+> ```sh
+> mvn help:active-profiles
+> ```
 
 ## Testing only one profile
 
