@@ -82,7 +82,7 @@
 										<!-- maven + springframework (profiles integration) -->
 										<![CDATA[
 											project.properties.springProfilesActive = project.activeProfiles.collect{ it.id }.join(',')
-											log.info "The following profiles are active: ${project.properties.springProfilesActive}"
+											log.info "The following ${project.activeProfiles.size()} profiles are active: ${project.activeProfiles.collect{ '"' + it.id + '"' }.join(", ")}"
 										]]>
 									</script>
 								</scripts>
